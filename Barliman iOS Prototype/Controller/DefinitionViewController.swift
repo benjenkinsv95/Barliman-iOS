@@ -35,6 +35,8 @@ class DefinitionViewController: UIViewController, UITextViewDelegate {
                                                object: nil)
 
         definitionView?.textView?.delegate = self
+        HighlightrThemeManager.instance.register(schemeTextView: definitionView)
+        HighlightrThemeManager.instance.register(schemeTextView: synthesizedCode)
     }
 
     override func viewWillAppear(_: Bool) {

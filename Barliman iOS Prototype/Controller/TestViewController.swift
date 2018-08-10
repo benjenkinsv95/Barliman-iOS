@@ -33,6 +33,10 @@ class TestViewController: UIViewController, UITextViewDelegate {
 
         inputTextView?.textView?.delegate = self
         outputTextView?.textView?.delegate = self
+
+        HighlightrThemeManager.instance.register(schemeTextView: inputTextView)
+        HighlightrThemeManager.instance.register(schemeTextView: outputTextView)
+        HighlightrThemeManager.instance.register(schemeTextView: synthesizedCode)
     }
 
     override func viewWillAppear(_: Bool) {

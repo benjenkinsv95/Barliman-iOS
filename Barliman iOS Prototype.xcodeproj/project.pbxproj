@@ -22,6 +22,8 @@
 		B51D14C52114E3A500173344 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51D14C42114E3A500173344 /* Launch Screen.storyboard */; };
 		B53E178721113A5000DE77EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E178621113A5000DE77EF /* AppDelegate.swift */; };
 		B53E178B211140A400DE77EF /* SchemeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E178A211140A400DE77EF /* SchemeTextView.swift */; };
+		B58F65AB211E41B3004F1827 /* HighlightrThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F65AA211E41B3004F1827 /* HighlightrThemeManager.swift */; };
+		B58F65AD211E492A004F1827 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F65AC211E492A004F1827 /* SettingsViewController.swift */; };
 		B5CA75422118B842001A841F /* ProjectNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA75412118B842001A841F /* ProjectNotifications.swift */; };
 		B5CA75442118CECE001A841F /* CodeSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA75432118CECE001A841F /* CodeSynthesizer.swift */; };
 		B5CA75462118D2CB001A841F /* CodeSynthesisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA75452118D2CB001A841F /* CodeSynthesisService.swift */; };
@@ -74,6 +76,8 @@
 		B51D14C42114E3A500173344 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B53E178621113A5000DE77EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53E178A211140A400DE77EF /* SchemeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeTextView.swift; sourceTree = "<group>"; };
+		B58F65AA211E41B3004F1827 /* HighlightrThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightrThemeManager.swift; sourceTree = "<group>"; };
+		B58F65AC211E492A004F1827 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B5CA75412118B842001A841F /* ProjectNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectNotifications.swift; sourceTree = "<group>"; };
 		B5CA75432118CECE001A841F /* CodeSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSynthesizer.swift; sourceTree = "<group>"; };
 		B5CA75452118D2CB001A841F /* CodeSynthesisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSynthesisService.swift; sourceTree = "<group>"; };
@@ -203,11 +207,13 @@
 		B51D14C92114E84100173344 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B58F65AA211E41B3004F1827 /* HighlightrThemeManager.swift */,
 				B51175E52114EFEB000F5736 /* DefinitionViewController.swift */,
 				B50F45EA210AB14200B453AC /* ProjectController.swift */,
 				17C8B77D83080DAC789F4D5F /* TestViewController.swift */,
 				B5CA754721191824001A841F /* SynthesizedCodeTextViews.swift */,
 				B5CA7551211A7A7A001A841F /* LoadSampleProjectPopup.swift */,
+				B58F65AC211E492A004F1827 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,11 +482,13 @@
 				B5CA75442118CECE001A841F /* CodeSynthesizer.swift in Sources */,
 				B5CA754821191824001A841F /* SynthesizedCodeTextViews.swift in Sources */,
 				B5CA75462118D2CB001A841F /* CodeSynthesisService.swift in Sources */,
+				B58F65AB211E41B3004F1827 /* HighlightrThemeManager.swift in Sources */,
 				B5CA754F211A65E7001A841F /* SampleProjects.swift in Sources */,
 				B51175E82117902D000F5736 /* Project.swift in Sources */,
 				17C8B366583018A2DA311704 /* TestViewController.swift in Sources */,
 				B5CA75422118B842001A841F /* ProjectNotifications.swift in Sources */,
 				B5D4C7A42117977800A84729 /* ProjectService.swift in Sources */,
+				B58F65AD211E492A004F1827 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

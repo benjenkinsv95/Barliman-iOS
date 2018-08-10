@@ -11,6 +11,7 @@ import UIKit
 
 class SchemeTextView: UIView {
     var textView: UITextView?
+    var textStorage = CodeAttributedString()
 
     var text: String {
         set {
@@ -34,9 +35,7 @@ class SchemeTextView: UIView {
     }
 
     func initTextView(frame _: CGRect) {
-        let textStorage = CodeAttributedString()
         textStorage.language = "Scheme"
-        textStorage.highlightr.setTheme(to: "Pojoaque")
         textStorage.highlightr.theme.codeFont = RPFont(name: "Courier", size: 14)
 
         let layoutManager = NSLayoutManager()
@@ -46,11 +45,16 @@ class SchemeTextView: UIView {
         layoutManager.addTextContainer(textContainer)
 
         textView = UITextView(frame: self.bounds, textContainer: textContainer)
+        setTheme("Pojoaque")
         textView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         textView?.autocorrectionType = UITextAutocorrectionType.no
         textView?.autocapitalizationType = UITextAutocapitalizationType.none
-        textView?.backgroundColor = textStorage.highlightr.theme.themeBackgroundColor
 
         self.addSubview(textView!)
+    }
+
+    func setTheme(_ theme: String) {
+        textStorage.highlightr.setTheme(to: theme)
+        textView?.backgroundColor = textStorage.highlightr.theme.themeBackgroundColor
     }
 }

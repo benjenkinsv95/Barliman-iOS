@@ -11,6 +11,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings-->
+        <scene sceneID="z3K-Cq-83Q">
+            <objects>
+                <viewController id="fde-bY-Ger" customClass="SettingsViewController" customModule="Barliman_iOS_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bo0-4z-vO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYt-rv-aFm">
+                                <rect key="frame" x="0.0" y="97" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TYt-rv-aFm" secondAttribute="height" multiplier="125:54" id="Y0e-UO-Zrf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="fde-bY-Ger" id="hQe-9l-DMl"/>
+                                    <outlet property="delegate" destination="fde-bY-Ger" id="Fmn-bU-bib"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-1e-JCA" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="16" y="267" width="343" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dgv-1e-JCA" secondAttribute="height" multiplier="343:128" id="OeV-pT-LbI"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEH-wA-3Jk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="Z5b-fm-JYY"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-to-D2Q">
+                                <rect key="frame" x="16" y="68" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z9Z-to-D2Q" firstAttribute="top" secondItem="BEH-wA-3Jk" secondAttribute="bottom" constant="4" id="B6S-ac-yD3"/>
+                            <constraint firstItem="dgv-1e-JCA" firstAttribute="top" secondItem="TYt-rv-aFm" secondAttribute="bottom" constant="8" id="Jcc-Ct-UJd"/>
+                            <constraint firstItem="TYt-rv-aFm" firstAttribute="leading" secondItem="gN1-Gh-QKG" secondAttribute="leading" id="TKu-0c-IFp"/>
+                            <constraint firstItem="dgv-1e-JCA" firstAttribute="leading" secondItem="gN1-Gh-QKG" secondAttribute="leading" constant="16" id="VsG-Fw-bMT"/>
+                            <constraint firstItem="gN1-Gh-QKG" firstAttribute="trailing" secondItem="Z9Z-to-D2Q" secondAttribute="trailing" constant="305" id="WZD-fG-hbL"/>
+                            <constraint firstItem="gN1-Gh-QKG" firstAttribute="trailing" secondItem="TYt-rv-aFm" secondAttribute="trailing" id="Zos-Ft-qB4"/>
+                            <constraint firstItem="TYt-rv-aFm" firstAttribute="top" secondItem="Z9Z-to-D2Q" secondAttribute="bottom" constant="8" id="f8W-jO-DAj"/>
+                            <constraint firstItem="Z9Z-to-D2Q" firstAttribute="leading" secondItem="gN1-Gh-QKG" secondAttribute="leading" constant="16" id="jbL-Qd-A8A"/>
+                            <constraint firstItem="gN1-Gh-QKG" firstAttribute="trailing" secondItem="BEH-wA-3Jk" secondAttribute="trailing" id="kcc-NA-VIn"/>
+                            <constraint firstItem="BEH-wA-3Jk" firstAttribute="leading" secondItem="gN1-Gh-QKG" secondAttribute="leading" id="pgp-hr-BBg"/>
+                            <constraint firstItem="BEH-wA-3Jk" firstAttribute="top" secondItem="gN1-Gh-QKG" secondAttribute="top" id="ueh-Be-c9P"/>
+                            <constraint firstItem="gN1-Gh-QKG" firstAttribute="trailing" secondItem="dgv-1e-JCA" secondAttribute="trailing" constant="16" id="vrs-QN-mGG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gN1-Gh-QKG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="EqM-ko-HkV"/>
+                    <connections>
+                        <outlet property="schemeThemeExampleTextView" destination="dgv-1e-JCA" id="cA9-JV-6Oy"/>
+                        <outlet property="themePicker" destination="TYt-rv-aFm" id="Eyw-yl-3Nn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUS-l9-2y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143.2" y="922.48875562218893"/>
+        </scene>
         <!--Test-->
         <scene sceneID="xga-M2-xru">
             <objects>
@@ -59,7 +124,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-Jj-Sfe">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
                                 <items>
                                     <navigationItem title="Test" id="H1N-gS-dn5">
                                         <barButtonItem key="leftBarButtonItem" title="Load" id="pMH-qu-J9D">
@@ -96,7 +161,7 @@
                             <constraint firstItem="9z2-An-WJa" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="cMn-Pm-mxj"/>
                             <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="VXO-Mn-wxB" secondAttribute="trailing" constant="283" id="dpl-zb-a6y"/>
                             <constraint firstItem="cAo-4X-Ie7" firstAttribute="top" secondItem="T9s-iA-swz" secondAttribute="bottom" constant="8" id="lDP-d7-8xq"/>
-                            <constraint firstItem="VXO-Mn-wxB" firstAttribute="top" secondItem="mmg-Jj-Sfe" secondAttribute="bottom" id="lnk-Mo-CIq"/>
+                            <constraint firstItem="VXO-Mn-wxB" firstAttribute="top" secondItem="mmg-Jj-Sfe" secondAttribute="bottom" constant="4" id="lnk-Mo-CIq"/>
                             <constraint firstItem="ngO-C2-JWG" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="oY8-ez-YtU"/>
                             <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="mmg-Jj-Sfe" secondAttribute="trailing" id="pJj-la-ebX"/>
                             <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="ngO-C2-JWG" secondAttribute="trailing" constant="16" id="qd2-Eg-Wcj"/>
@@ -210,6 +275,7 @@
                     <connections>
                         <segue destination="Aa4-qt-IT8" kind="relationship" relationship="viewControllers" id="dih-cC-gFk"/>
                         <segue destination="Dzw-lk-VDE" kind="relationship" relationship="viewControllers" id="bgD-iI-URI"/>
+                        <segue destination="fde-bY-Ger" kind="relationship" relationship="viewControllers" id="rme-ES-cOo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0D-xn-IQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>

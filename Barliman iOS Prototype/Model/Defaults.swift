@@ -11,10 +11,26 @@ import SwiftyUserDefaults
 
 extension DefaultsKeys {
     static let definition = DefaultsKey<String>("definition")
+    static let selectedTheme = DefaultsKey<String>("selectedTheme")
 }
 
 public extension UserDefaults {
     func setDefaults() {
-        Defaults[.definition] = "(define ,A (lambda ,B ,C))"
+        if Defaults[.definition] == "" {
+            Defaults[.definition] =
+                """
+                ; ,A ,B and ,C are holes in the program
+                ; That barliman will attempt to generate.
+                (define ,A
+                  (lambda ,B
+                    ,C
+                   )
+                )
+                """
+        }
+
+        if Defaults[.selectedTheme] == "" {
+            Defaults[.selectedTheme] = "Pojoaque"
+        }
     }
 }
