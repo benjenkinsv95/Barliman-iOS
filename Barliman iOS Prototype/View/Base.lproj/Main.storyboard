@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h9m-8P-cq0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test-->
+        <scene sceneID="xga-M2-xru">
+            <objects>
+                <viewController storyboardIdentifier="testVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dzw-lk-VDE" customClass="TestViewController" customModule="Barliman_iOS_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OgH-qo-cfH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synthesized Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z2-An-WJa">
+                                <rect key="frame" x="16" y="323" width="140" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9z2-An-WJa" secondAttribute="height" multiplier="20:3" id="KuV-14-Jpy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9s-iA-swz" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="16" y="93" width="343" height="87"/>
+                                <color key="backgroundColor" red="1" green="0.1634161704" blue="0.057452406290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T9s-iA-swz" secondAttribute="height" multiplier="343:87" id="ZnD-Z8-dd9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngO-C2-JWG" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="16" y="217" width="343" height="98"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ngO-C2-JWG" secondAttribute="height" multiplier="7:2" id="HF8-T1-SLQ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAo-4X-Ie7">
+                                <rect key="frame" x="16" y="188" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cAo-4X-Ie7" secondAttribute="height" multiplier="30:7" id="D7p-or-JCL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZG2-xW-PQM" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="16" y="352" width="343" height="266"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZG2-xW-PQM" secondAttribute="height" multiplier="49:38" id="SVL-Zj-V3w"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-Jj-Sfe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Test" id="H1N-gS-dn5">
+                                        <barButtonItem key="leftBarButtonItem" title="Load" id="pMH-qu-J9D">
+                                            <connections>
+                                                <action selector="loadPressed:" destination="Dzw-lk-VDE" id="hHX-c1-fgm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Input" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-Mn-wxB">
+                                <rect key="frame" x="16" y="64" width="76" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VXO-Mn-wxB" secondAttribute="height" multiplier="76:21" id="EXa-Pk-3Cm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="VXO-Mn-wxB" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="06E-bJ-Dlc"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="cAo-4X-Ie7" secondAttribute="trailing" constant="269" id="Dce-cx-1TD"/>
+                            <constraint firstItem="T9s-iA-swz" firstAttribute="top" secondItem="VXO-Mn-wxB" secondAttribute="bottom" constant="8" id="ESb-fd-jNY"/>
+                            <constraint firstItem="mmg-Jj-Sfe" firstAttribute="top" secondItem="BRa-Zj-tYg" secondAttribute="top" id="HAH-QS-h6r"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="T9s-iA-swz" secondAttribute="trailing" constant="16" id="JHw-7P-fIg"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="9z2-An-WJa" secondAttribute="trailing" constant="219" id="NrI-uF-cAi"/>
+                            <constraint firstItem="9z2-An-WJa" firstAttribute="top" secondItem="ngO-C2-JWG" secondAttribute="bottom" constant="8" id="SES-eR-s86"/>
+                            <constraint firstItem="cAo-4X-Ie7" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="aIv-qu-a0T"/>
+                            <constraint firstItem="mmg-Jj-Sfe" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" id="bjr-6N-s44"/>
+                            <constraint firstItem="ngO-C2-JWG" firstAttribute="top" secondItem="cAo-4X-Ie7" secondAttribute="bottom" constant="8" id="c8c-Kp-7SV"/>
+                            <constraint firstItem="9z2-An-WJa" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="cMn-Pm-mxj"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="VXO-Mn-wxB" secondAttribute="trailing" constant="283" id="dpl-zb-a6y"/>
+                            <constraint firstItem="cAo-4X-Ie7" firstAttribute="top" secondItem="T9s-iA-swz" secondAttribute="bottom" constant="8" id="lDP-d7-8xq"/>
+                            <constraint firstItem="VXO-Mn-wxB" firstAttribute="top" secondItem="mmg-Jj-Sfe" secondAttribute="bottom" id="lnk-Mo-CIq"/>
+                            <constraint firstItem="ngO-C2-JWG" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="oY8-ez-YtU"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="mmg-Jj-Sfe" secondAttribute="trailing" id="pJj-la-ebX"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="ngO-C2-JWG" secondAttribute="trailing" constant="16" id="qd2-Eg-Wcj"/>
+                            <constraint firstItem="ZG2-xW-PQM" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="sS1-dd-PSp"/>
+                            <constraint firstItem="T9s-iA-swz" firstAttribute="leading" secondItem="BRa-Zj-tYg" secondAttribute="leading" constant="16" id="tCS-iR-1gW"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="trailing" secondItem="ZG2-xW-PQM" secondAttribute="trailing" constant="16" id="uc2-Zi-Ot0"/>
+                            <constraint firstItem="BRa-Zj-tYg" firstAttribute="bottom" secondItem="ZG2-xW-PQM" secondAttribute="bottom" id="vHF-wC-HQe"/>
+                            <constraint firstItem="ZG2-xW-PQM" firstAttribute="top" secondItem="9z2-An-WJa" secondAttribute="bottom" constant="8" id="vfR-zO-yCG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BRa-Zj-tYg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Test" id="YDc-pC-dwB"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="T9s-iA-swz" id="Pyv-1y-0lV"/>
+                        <outlet property="outputTextView" destination="ngO-C2-JWG" id="Ql3-QZ-btm"/>
+                        <outlet property="synthesizedCode" destination="ZG2-xW-PQM" id="Dxo-BU-ddD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acS-hS-dDc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.8" y="341.37931034482762"/>
+        </scene>
+        <!--Definition-->
+        <scene sceneID="SIq-NK-hRU">
+            <objects>
+                <viewController storyboardIdentifier="definitionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aa4-qt-IT8" customClass="DefinitionViewController" customModule="Barliman_iOS_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCO-Pd-sDd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synthesized Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXu-2N-Ev0">
+                                <rect key="frame" x="16" y="323" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1d-dG-hTW" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="16" y="93" width="343" height="222"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIE-Oo-HAy" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="16" y="352" width="343" height="266"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EIE-Oo-HAy" secondAttribute="height" multiplier="49:38" id="d9m-bh-hNh"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7l-2w-fzO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Code Definition" id="Wv5-xg-WxY">
+                                        <barButtonItem key="leftBarButtonItem" title="Load" id="zg3-Jf-SKH">
+                                            <connections>
+                                                <action selector="loadPressed:" destination="Aa4-qt-IT8" id="b7U-gN-Wgx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Function Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nJ-cx-LxM">
+                                <rect key="frame" x="16" y="64" width="154" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6nJ-cx-LxM" secondAttribute="height" multiplier="22:3" id="mDZ-xl-J6F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="EIE-Oo-HAy" firstAttribute="leading" secondItem="NC3-AX-fPz" secondAttribute="leading" constant="16" id="1QF-4m-jU0"/>
+                            <constraint firstItem="U7l-2w-fzO" firstAttribute="leading" secondItem="NC3-AX-fPz" secondAttribute="leading" id="2sc-5a-4WB"/>
+                            <constraint firstItem="NC3-AX-fPz" firstAttribute="trailing" secondItem="EIE-Oo-HAy" secondAttribute="trailing" constant="16" id="7Ro-rw-3eO"/>
+                            <constraint firstItem="6nJ-cx-LxM" firstAttribute="leading" secondItem="NC3-AX-fPz" secondAttribute="leading" constant="16" id="9RX-5r-Z4x"/>
+                            <constraint firstItem="JXu-2N-Ev0" firstAttribute="top" secondItem="A1d-dG-hTW" secondAttribute="bottom" constant="8" id="D6S-fG-IqZ"/>
+                            <constraint firstItem="A1d-dG-hTW" firstAttribute="top" secondItem="6nJ-cx-LxM" secondAttribute="bottom" constant="8" id="Mfw-tc-17a"/>
+                            <constraint firstItem="6nJ-cx-LxM" firstAttribute="top" secondItem="U7l-2w-fzO" secondAttribute="bottom" id="QbO-lC-eLt"/>
+                            <constraint firstItem="A1d-dG-hTW" firstAttribute="leading" secondItem="NC3-AX-fPz" secondAttribute="leading" constant="16" id="RW8-3s-6q0"/>
+                            <constraint firstItem="NC3-AX-fPz" firstAttribute="trailing" secondItem="JXu-2N-Ev0" secondAttribute="trailing" constant="219" id="eQf-zg-VTC"/>
+                            <constraint firstItem="U7l-2w-fzO" firstAttribute="top" secondItem="NC3-AX-fPz" secondAttribute="top" id="ktD-7d-l8a"/>
+                            <constraint firstItem="NC3-AX-fPz" firstAttribute="trailing" secondItem="6nJ-cx-LxM" secondAttribute="trailing" constant="205" id="opt-2c-bLX"/>
+                            <constraint firstItem="NC3-AX-fPz" firstAttribute="trailing" secondItem="U7l-2w-fzO" secondAttribute="trailing" id="qdT-Dc-E8G"/>
+                            <constraint firstItem="EIE-Oo-HAy" firstAttribute="top" secondItem="JXu-2N-Ev0" secondAttribute="bottom" constant="8" id="r24-LO-qJ0"/>
+                            <constraint firstItem="NC3-AX-fPz" firstAttribute="bottom" secondItem="EIE-Oo-HAy" secondAttribute="bottom" id="rid-rd-eUB"/>
+                            <constraint firstItem="NC3-AX-fPz" firstAttribute="trailing" secondItem="A1d-dG-hTW" secondAttribute="trailing" constant="16" id="vnk-NZ-GNI"/>
+                            <constraint firstItem="JXu-2N-Ev0" firstAttribute="leading" secondItem="NC3-AX-fPz" secondAttribute="leading" constant="16" id="wNH-TW-qMQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NC3-AX-fPz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Definition" id="TsW-n9-HaN"/>
+                    <connections>
+                        <outlet property="definitionView" destination="A1d-dG-hTW" id="n3o-L4-y46"/>
+                        <outlet property="synthesizedCode" destination="EIE-Oo-HAy" id="hZk-pa-IMT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNj-YY-Btf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023.2" y="-324.28785607196403"/>
+        </scene>
+        <!--Project Controller-->
+        <scene sceneID="RIa-Bc-z3i">
+            <objects>
+                <tabBarController storyboardIdentifier="tabs" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h9m-8P-cq0" customClass="ProjectController" customModule="Barliman_iOS_Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KYc-lu-XSo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Aa4-qt-IT8" kind="relationship" relationship="viewControllers" id="dih-cC-gFk"/>
+                        <segue destination="Dzw-lk-VDE" kind="relationship" relationship="viewControllers" id="bgD-iI-URI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0D-xn-IQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="9"/>
+        </scene>
+    </scenes>
+</document>

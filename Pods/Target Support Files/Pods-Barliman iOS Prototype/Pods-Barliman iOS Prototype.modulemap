@@ -1,0 +1,6 @@
+framework module Pods_Barliman_iOS_Prototype {
+  umbrella header "Pods-Barliman iOS Prototype-umbrella.h"
+
+  export *
+  module * { export * }
+}
