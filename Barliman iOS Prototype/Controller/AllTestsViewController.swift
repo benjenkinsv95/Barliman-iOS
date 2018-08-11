@@ -20,6 +20,11 @@ class AllTestsViewController: UIViewController, UITableViewDelegate, UITableView
         HighlightrThemeManager.instance.register(schemeTextView: synthesizedCode)
 
         NotificationCenter.default.addObserver(self,
+                                               selector: #selector(projectUpdated(_:)),
+                                               name: .projectUpdated,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
                                                selector: #selector(codeSynthesisChange(_:)),
                                                name: .codeSynthesisCompleted,
                                                object: nil)
@@ -33,6 +38,13 @@ class AllTestsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewWillAppear(_ willAppear: Bool) {
         super.viewWillAppear(willAppear)
         updateUI()
+    }
+
+    @objc
+    func projectUpdated(_: Notification) {
+        DispatchQueue.main.async {
+            self.updateUI()
+        }
     }
 
     func updateUI() {
@@ -76,5 +88,9 @@ class AllTestsViewController: UIViewController, UITableViewDelegate, UITableView
         DispatchQueue.main.async {
             SynthesizedCodeTextViews.update(synthesizedCode: self.synthesizedCode, fromCodeSynthesis: notification)
         }
+    }
+
+    @IBAction func loadProject(_: Any) {
+        SampleProjectPopupLoader.load()
     }
 }

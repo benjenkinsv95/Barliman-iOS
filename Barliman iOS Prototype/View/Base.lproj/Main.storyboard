@@ -114,7 +114,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tests" id="K6b-XB-KCe"/>
                     <navigationItem key="navigationItem" title="Tests" id="wGI-A4-pcR">
-                        <barButtonItem key="leftBarButtonItem" title="Load" id="Tcn-BZ-fcb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Load" id="Tcn-BZ-fcb">
+                            <connections>
+                                <action selector="loadProject:" destination="HgH-fW-Om5" id="59R-HY-2Ct"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="eAz-kp-eOW">
                             <connections>
                                 <action selector="addNewTest:" destination="HgH-fW-Om5" id="6hI-Ix-MD5"/>

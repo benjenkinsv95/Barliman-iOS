@@ -76,7 +76,7 @@ class SampleProjects {
                 codeDefinition:
                 """
                 (define ,A
-                  (lambda (l s)
+                  (lambda (lst lst2)
                     ,C))
                 """,
                 tests: [

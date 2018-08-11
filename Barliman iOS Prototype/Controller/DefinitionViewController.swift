@@ -18,7 +18,6 @@ class DefinitionViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         synthesizedCode?.textView?.isEditable = false
-
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(projectUpdated(_:)),
                                                name: .projectUpdated,
@@ -37,6 +36,7 @@ class DefinitionViewController: UIViewController, UITextViewDelegate {
         definitionView?.textView?.delegate = self
         HighlightrThemeManager.instance.register(schemeTextView: definitionView)
         HighlightrThemeManager.instance.register(schemeTextView: synthesizedCode)
+        codeSynthesizer.synthesize()
     }
 
     override func viewWillAppear(_: Bool) {
