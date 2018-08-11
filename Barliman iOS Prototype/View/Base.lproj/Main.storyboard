@@ -43,44 +43,46 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-5N-TNc">
-                                                    <rect key="frame" x="95" y="11" width="265" height="30"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8KQ-jd-NnZ">
-                                                    <rect key="frame" x="95" y="49" width="265" height="30"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expected" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWH-Nb-0rZ">
                                                     <rect key="frame" x="15" y="54" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPi-kL-L0g" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                                    <rect key="frame" x="95" y="11" width="265" height="30"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="FcK-fh-ons"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-eq-jKk" customClass="SchemeTextView" customModule="Barliman_iOS_Prototype" customModuleProvider="target">
+                                                    <rect key="frame" x="95" y="54" width="265" height="27"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="m9d-u2-ffr"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fFK-5N-TNc" firstAttribute="top" secondItem="FRq-35-T5y" secondAttribute="top" constant="11" id="2GN-aG-lPp"/>
-                                                <constraint firstAttribute="trailing" secondItem="8KQ-jd-NnZ" secondAttribute="trailing" constant="15" id="6D0-oS-vD6"/>
-                                                <constraint firstItem="fFK-5N-TNc" firstAttribute="width" secondItem="8KQ-jd-NnZ" secondAttribute="width" id="8PM-Ml-iZg"/>
+                                                <constraint firstItem="kBL-eq-jKk" firstAttribute="top" secondItem="EPi-kL-L0g" secondAttribute="bottom" constant="13" id="9Sb-9D-Old"/>
                                                 <constraint firstItem="UWH-Nb-0rZ" firstAttribute="top" secondItem="eMh-9q-jxh" secondAttribute="bottom" constant="17" id="LVh-SB-eid"/>
                                                 <constraint firstItem="UWH-Nb-0rZ" firstAttribute="leading" secondItem="FRq-35-T5y" secondAttribute="leading" constant="15" id="MJf-8r-mje"/>
-                                                <constraint firstItem="8KQ-jd-NnZ" firstAttribute="leading" secondItem="UWH-Nb-0rZ" secondAttribute="trailing" constant="8" id="RA9-Oc-ENu"/>
-                                                <constraint firstItem="8KQ-jd-NnZ" firstAttribute="top" secondItem="fFK-5N-TNc" secondAttribute="bottom" constant="8" id="aNO-4R-bM4"/>
-                                                <constraint firstAttribute="trailing" secondItem="fFK-5N-TNc" secondAttribute="trailing" constant="15" id="dVg-gH-iiy"/>
-                                                <constraint firstAttribute="bottom" secondItem="8KQ-jd-NnZ" secondAttribute="bottom" constant="12.5" id="ibQ-fP-cUP"/>
+                                                <constraint firstAttribute="trailing" secondItem="EPi-kL-L0g" secondAttribute="trailing" constant="15" id="Nd8-N0-lGs"/>
+                                                <constraint firstItem="EPi-kL-L0g" firstAttribute="leading" secondItem="eMh-9q-jxh" secondAttribute="trailing" constant="14" id="Yjp-ti-Bpd"/>
+                                                <constraint firstAttribute="bottom" secondItem="kBL-eq-jKk" secondAttribute="bottom" constant="10.5" id="Zef-XL-3ab"/>
+                                                <constraint firstItem="kBL-eq-jKk" firstAttribute="leading" secondItem="UWH-Nb-0rZ" secondAttribute="trailing" constant="8" id="bHu-Lp-lN5"/>
+                                                <constraint firstItem="kBL-eq-jKk" firstAttribute="width" secondItem="EPi-kL-L0g" secondAttribute="width" id="gjC-cY-o6w"/>
+                                                <constraint firstAttribute="trailing" secondItem="kBL-eq-jKk" secondAttribute="trailing" constant="15" id="hsD-o9-srV"/>
                                                 <constraint firstItem="eMh-9q-jxh" firstAttribute="leading" secondItem="FRq-35-T5y" secondAttribute="leading" constant="33" id="kXQ-s4-94K"/>
-                                                <constraint firstItem="fFK-5N-TNc" firstAttribute="leading" secondItem="eMh-9q-jxh" secondAttribute="trailing" constant="14" id="qWT-00-2hG"/>
+                                                <constraint firstItem="EPi-kL-L0g" firstAttribute="top" secondItem="FRq-35-T5y" secondAttribute="top" constant="11" id="qKK-Yr-ti2"/>
                                                 <constraint firstAttribute="bottom" secondItem="UWH-Nb-0rZ" secondAttribute="bottom" constant="16.5" id="tIe-hk-sHj"/>
                                                 <constraint firstItem="eMh-9q-jxh" firstAttribute="top" secondItem="FRq-35-T5y" secondAttribute="top" constant="16" id="x3D-nh-PT5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="expectedOutputTextField" destination="8KQ-jd-NnZ" id="mF0-8B-gP2"/>
-                                            <outlet property="inputTextField" destination="fFK-5N-TNc" id="ynr-bd-CPo"/>
+                                            <outlet property="expectedOutputTextField" destination="kBL-eq-jKk" id="mwv-7T-U1I"/>
+                                            <outlet property="inputTextField" destination="EPi-kL-L0g" id="roI-85-P2J"/>
                                             <outlet property="nameLabel" destination="eMh-9q-jxh" id="0l0-CE-Pks"/>
                                         </connections>
                                     </tableViewCell>

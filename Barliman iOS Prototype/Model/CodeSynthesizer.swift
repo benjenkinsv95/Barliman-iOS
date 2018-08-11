@@ -32,6 +32,7 @@ class DefaultCodeSynthesizer: CodeSynthesizer {
     }
 
     func synthesize() {
+        synthesizedCode = "Working on it..."
         NotificationCenter.default.post(name: .codeSynthesisStarted, object: self, userInfo: ["message": "Working on it..."])
 
         request?.cancel()
