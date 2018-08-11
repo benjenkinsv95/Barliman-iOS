@@ -14,6 +14,7 @@ class HighlightrThemeManager {
     public static let instance = HighlightrThemeManager()
     private var views: [SchemeTextView] = []
     public var theme = Defaults[.selectedTheme]
+
     public var viewCount: Int { return views.count }
     public let allThemes: [String] = CodeAttributedString().highlightr.availableThemes().sorted()
 

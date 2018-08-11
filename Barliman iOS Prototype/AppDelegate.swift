@@ -6,6 +6,7 @@
 //  Copyright © 2018 Ben Jenkins. All rights reserved.
 //
 
+import ChameleonFramework
 import SwiftyUserDefaults
 import UIKit
 
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Defaults.setDefaults()
         DefaultProject.instance.load()
+        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatRed, with: UIContentStyle.contrast)
+
         return true
     }
 

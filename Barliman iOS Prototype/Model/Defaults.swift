@@ -30,7 +30,7 @@ public extension UserDefaults {
         }
 
         if Defaults[.selectedTheme] == "" {
-            Defaults[.selectedTheme] = "Pojoaque"
+            Defaults[.selectedTheme] = "dark"
         }
     }
 }

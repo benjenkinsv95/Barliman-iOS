@@ -7,6 +7,8 @@ target 'Barliman iOS Prototype' do
   pod 'Moya', '~> 11.0'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'TCPickerView'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git', :branch => 'wip/swift4'
+
 
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
