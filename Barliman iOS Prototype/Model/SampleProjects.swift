@@ -62,7 +62,7 @@ class SampleProjects {
                 title: "Append (2 empty lists)",
                 codeDefinition: functionDefinition,
                 testInput: "(append '() '())",
-                textExpectedOutput: "'()"
+                textExpectedOutput: "`()"
             ),
             SampleProject(
                 title: "Append (2 single element number lists)",
