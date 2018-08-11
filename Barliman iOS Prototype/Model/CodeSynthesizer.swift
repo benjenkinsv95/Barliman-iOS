@@ -76,8 +76,7 @@ class DefaultCodeSynthesizer: CodeSynthesizer {
                 self.synthesizedCode = newSynthesizedCode
                 NotificationCenter.default.post(name: .codeSynthesisCompleted, object: self, userInfo: ["message": newSynthesizedCode])
             case .failure:
-                self.synthesizedCode = "Failed to synthesize code!"
-                NotificationCenter.default.post(name: .codeSynthesisCompleted, object: self, userInfo: ["message": self.synthesizedCode])
+                print("Synthesis cancelled!")
             }
         }
     }
