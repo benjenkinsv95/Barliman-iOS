@@ -24,11 +24,13 @@ class ProjectController: UITabBarController, UIGestureRecognizerDelegate {
 
     @objc
     func projectUpdated(_: Notification) {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(synthesizeCode), userInfo: nil, repeats: false)
+        DispatchQueue.main.async {
+            self.timer?.invalidate()
+            self.timer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(self.synthesizeCode(_:)), userInfo: nil, repeats: false)
+        }
     }
 
-    @objc func synthesizeCode() {
+    @objc func synthesizeCode(_: Timer) {
         codeSynthesizer.synthesize()
     }
 }

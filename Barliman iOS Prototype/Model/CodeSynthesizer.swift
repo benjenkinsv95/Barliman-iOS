@@ -26,6 +26,7 @@ class DefaultCodeSynthesizer: CodeSynthesizer {
     static var instance = DefaultCodeSynthesizer()
     private var project = DefaultProject.instance
     var synthesizedCode: String = "N/A"
+    var request: Cancellable?
 
     private init() {
     }
@@ -33,10 +34,10 @@ class DefaultCodeSynthesizer: CodeSynthesizer {
     func synthesize() {
         NotificationCenter.default.post(name: .codeSynthesisStarted, object: self, userInfo: ["message": "Working on it..."])
 
-        DefaultCodeSynthesizer.codeSynthesisProvider.request(
+        request?.cancel()
+        request = DefaultCodeSynthesizer.codeSynthesisProvider.request(
             CodeSynthesisService.synthesize(codeDefinition: project.codeDefinition,
-                                            testInput: project.testInput,
-                                            textExpectedOutput: project.textExpectedOutput)) { response in
+                                            tests: project.tests)) { response in
             switch response {
             case let .success(moyaResponse):
                 guard moyaResponse.statusCode < 300 else {

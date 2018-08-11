@@ -63,7 +63,10 @@ class DefinitionViewController: UIViewController, UITextViewDelegate {
     }
 
     func textViewDidChange(_: UITextView) {
-        project.codeDefinition = definitionView.text
+        let definition = definitionView.text
+        DispatchQueue.global(qos: .background).async {
+            self.project.codeDefinition = definition
+        }
     }
 
     @IBAction func loadPressed(_: Any) {

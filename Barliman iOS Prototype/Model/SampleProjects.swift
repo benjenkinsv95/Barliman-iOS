@@ -11,6 +11,10 @@
 import Foundation
 
 class SampleProject: Project {
+    var tests: [Test]
+
+    var selectedTest: Test
+
     // Just grab whatever the default deviceId is. /shrug
     var deviceId: String = DefaultProject.instance.deviceId
 
@@ -18,21 +22,20 @@ class SampleProject: Project {
 
     var codeDefinition: String
 
-    var testInput: String
-
-    var textExpectedOutput: String
-
-    init(title: String, codeDefinition: String, testInput: String, textExpectedOutput: String) {
+    init(title: String, codeDefinition: String, tests: [Test]) {
         self.title = title
         self.codeDefinition = codeDefinition
-        self.testInput = testInput
-        self.textExpectedOutput = textExpectedOutput
+        self.tests = tests
+        selectedTest = tests[0]
     }
 
     func load() {
     }
 
     func save() {
+    }
+
+    func addNewTest() {
     }
 }
 
@@ -56,43 +59,57 @@ class SampleProjects {
         )
         """
 
+    // Examples from Barliman https://github.com/webyrd/Barliman/tree/master/interesting_examples
     public static func getAll() -> [SampleProject] {
         return [
             SampleProject(
-                title: "Append (2 empty lists)",
+                title: "New Project",
                 codeDefinition: functionDefinition,
-                testInput: "(append '() '())",
-                textExpectedOutput: "`()"
+                tests: [
+                    Test(id: 1,
+                         input: "",
+                         expectedOutput: ""),
+                ]
             ),
             SampleProject(
-                title: "Append (2 single element number lists)",
-                codeDefinition: functionDefinition,
-                testInput: "(append '(1) '(2))",
-                textExpectedOutput: "`(1 2)"
+                title: "Append",
+                codeDefinition:
+                """
+                (define ,A
+                  (lambda (l s)
+                    ,C))
+                """,
+                tests: [
+                    Test(id: 1,
+                         input: "(append '() '())",
+                         expectedOutput: "'()"),
+                    Test(id: 2,
+                         input: "(append '(,g1) '(,g2))",
+                         expectedOutput: "`(,g1 ,g2)"),
+                    Test(id: 3,
+                         input: "(append '(,g3 ,g4) '(,g5 ,g6))",
+                         expectedOutput: "`(,g3 ,g4 ,g5 ,g6)"),
+                ]
             ),
             SampleProject(
-                title: "Append (2 single element lists)",
-                codeDefinition: functionDefinition,
-                testInput: "(append '(,g1) '(,g2))",
-                textExpectedOutput: "`(,g1 ,g2)"
-            ),
-            SampleProject(
-                title: "Append (2 lists with 2 elements each)",
-                codeDefinition: functionDefinition,
-                testInput: "(append '(,g3 ,g4) '(,g5 ,g6))",
-                textExpectedOutput: "`(,g3 ,g4 ,g5 ,g6)"
-            ),
-            SampleProject(
-                title: "foldr (with cons)",
-                codeDefinition: functionDefinition,
-                testInput: "(foldr cons ',g4 '(,g5 ,g6))",
-                textExpectedOutput: "`(,g5 ,g6 ,g4)"
-            ),
-            SampleProject(
-                title: "foldr (with equal)",
-                codeDefinition: functionDefinition,
-                testInput: "(foldr equal? ',g3 '(,g3))",
-                textExpectedOutput: "#t"
+                title: "foldr",
+                codeDefinition:
+                """
+                (define ,A
+                  (lambda (func initialValue lst)
+                    ,C))
+                """,
+                tests: [
+                    Test(id: 1,
+                         input: "(foldr ',g2 ',g1 '())",
+                         expectedOutput: "`,g1"),
+                    Test(id: 2,
+                         input: "(foldr cons ',g4 '(,g5 ,g6))",
+                         expectedOutput: "`(,g5 ,g6 . ,g4)"),
+                    Test(id: 3,
+                         input: "(foldr equal? ',g3 '(,g3))",
+                         expectedOutput: "#t"),
+                ]
             ),
         ]
     }

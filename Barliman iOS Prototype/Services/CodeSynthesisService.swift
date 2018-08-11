@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum CodeSynthesisService {
-    case synthesize(codeDefinition: String, testInput: String, textExpectedOutput: String)
+    case synthesize(codeDefinition: String, tests: [Test])
 }
 
 extension CodeSynthesisService: TargetType {
@@ -28,7 +28,7 @@ extension CodeSynthesisService: TargetType {
         }
     }
     var task: Task {
-        class Test: Codable {
+        class RequestTest: Codable {
             let id: Int
             let input: String
             let output: String
@@ -49,12 +49,16 @@ extension CodeSynthesisService: TargetType {
         }
 
         switch self {
-        case let .synthesize(codeDefinition, testInput, textExpectedOutput): // Always send parameters as JSON in request body
+        case let .synthesize(codeDefinition, tests): // Always send parameters as JSON in request body
+            let testsJson = tests.map({ test in
+                RequestTest(id: test.id,
+                            input: test.input,
+                            output: test.expectedOutput
+                ).toJSON()
+            })
             return .requestParameters(parameters: [
                 "definition": codeDefinition,
-                "tests": [
-                    Test(id: 1, input: testInput, output: textExpectedOutput).toJSON(),
-                ],
+                "tests": testsJson,
             ], encoding: JSONEncoding.default)
         }
     }

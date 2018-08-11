@@ -40,8 +40,8 @@ class TestViewController: UIViewController, UITextViewDelegate {
     }
 
     override func viewWillAppear(_: Bool) {
-        inputTextView?.text = project.testInput
-        outputTextView?.text = project.textExpectedOutput
+        inputTextView?.text = project.selectedTest.input
+        outputTextView?.text = project.selectedTest.expectedOutput
         synthesizedCode?.text = codeSynthesizer.synthesizedCode
     }
 
@@ -52,14 +52,18 @@ class TestViewController: UIViewController, UITextViewDelegate {
     @objc
     func projectUpdated(_: Notification) {
         DispatchQueue.main.async {
-            self.inputTextView?.text = self.project.testInput
-            self.outputTextView?.text = self.project.textExpectedOutput
+            self.inputTextView?.text = self.project.selectedTest.input
+            self.outputTextView?.text = self.project.selectedTest.expectedOutput
         }
     }
 
     func textViewDidChange(_: UITextView) {
-        project.testInput = inputTextView.text
-        project.textExpectedOutput = outputTextView.text
+        let input = inputTextView.text
+        let output = outputTextView.text
+        DispatchQueue.global(qos: .background).async {
+            self.project.selectedTest.input = input
+            self.project.selectedTest.expectedOutput = output
+        }
     }
 
     @objc
@@ -67,9 +71,5 @@ class TestViewController: UIViewController, UITextViewDelegate {
         DispatchQueue.main.async {
             SynthesizedCodeTextViews.update(synthesizedCode: self.synthesizedCode, fromCodeSynthesis: notification)
         }
-    }
-
-    @IBAction func loadPressed(_: Any) {
-        SampleProjectPopupLoader.load()
     }
 }

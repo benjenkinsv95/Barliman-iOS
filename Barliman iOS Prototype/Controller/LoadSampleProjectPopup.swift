@@ -30,8 +30,8 @@ class SampleProjectPopupLoader {
             let selectedProject = sampleProjects[selectedIndex]
             print("Selected \(selectedProject.title)")
             self.project.codeDefinition = selectedProject.codeDefinition
-            self.project.testInput = selectedProject.testInput
-            self.project.textExpectedOutput = selectedProject.textExpectedOutput
+            self.project.tests = selectedProject.tests
+            self.project.selectedTest = selectedProject.selectedTest
         }
         picker.show()
     }

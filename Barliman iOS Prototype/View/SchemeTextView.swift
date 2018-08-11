@@ -49,6 +49,10 @@ class SchemeTextView: UIView {
         textView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         textView?.autocorrectionType = UITextAutocorrectionType.no
         textView?.autocapitalizationType = UITextAutocapitalizationType.none
+        textView?.smartQuotesType = .no
+        textView?.smartDashesType = .no
+        textView?.smartInsertDeleteType = .no
+        textView?.spellCheckingType = .no
 
         self.addSubview(textView!)
     }
