@@ -22,6 +22,8 @@
 		B51D14C52114E3A500173344 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51D14C42114E3A500173344 /* Launch Screen.storyboard */; };
 		B53E178721113A5000DE77EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E178621113A5000DE77EF /* AppDelegate.swift */; };
 		B53E178B211140A400DE77EF /* SchemeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E178A211140A400DE77EF /* SchemeTextView.swift */; };
+		B5697618211F6E74003EFCE6 /* AllTestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5697617211F6E74003EFCE6 /* AllTestsViewController.swift */; };
+		B5856E1C211F68E800205BF1 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5856E1B211F68E800205BF1 /* TestTableViewCell.swift */; };
 		B58F65AB211E41B3004F1827 /* HighlightrThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F65AA211E41B3004F1827 /* HighlightrThemeManager.swift */; };
 		B58F65AD211E492A004F1827 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58F65AC211E492A004F1827 /* SettingsViewController.swift */; };
 		B5CA75422118B842001A841F /* ProjectNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA75412118B842001A841F /* ProjectNotifications.swift */; };
@@ -76,6 +78,8 @@
 		B51D14C42114E3A500173344 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B53E178621113A5000DE77EF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53E178A211140A400DE77EF /* SchemeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeTextView.swift; sourceTree = "<group>"; };
+		B5697617211F6E74003EFCE6 /* AllTestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTestsViewController.swift; sourceTree = "<group>"; };
+		B5856E1B211F68E800205BF1 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
 		B58F65AA211E41B3004F1827 /* HighlightrThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightrThemeManager.swift; sourceTree = "<group>"; };
 		B58F65AC211E492A004F1827 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B5CA75412118B842001A841F /* ProjectNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectNotifications.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			children = (
 				B50F45EC210AB14200B453AC /* Main.storyboard */,
 				B53E178A211140A400DE77EF /* SchemeTextView.swift */,
+				B5856E1B211F68E800205BF1 /* TestTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				B5CA754721191824001A841F /* SynthesizedCodeTextViews.swift */,
 				B5CA7551211A7A7A001A841F /* LoadSampleProjectPopup.swift */,
 				B58F65AC211E492A004F1827 /* SettingsViewController.swift */,
+				B5697617211F6E74003EFCE6 /* AllTestsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -482,9 +488,11 @@
 				B5D4C7A62117A05C00A84729 /* UtilExtensions.swift in Sources */,
 				B50F45EB210AB14200B453AC /* ProjectController.swift in Sources */,
 				B5CA75442118CECE001A841F /* CodeSynthesizer.swift in Sources */,
+				B5697618211F6E74003EFCE6 /* AllTestsViewController.swift in Sources */,
 				B5CA754821191824001A841F /* SynthesizedCodeTextViews.swift in Sources */,
 				B5CA75462118D2CB001A841F /* CodeSynthesisService.swift in Sources */,
 				B58F65AB211E41B3004F1827 /* HighlightrThemeManager.swift in Sources */,
+				B5856E1C211F68E800205BF1 /* TestTableViewCell.swift in Sources */,
 				B5CA754F211A65E7001A841F /* SampleProjects.swift in Sources */,
 				B51175E82117902D000F5736 /* Project.swift in Sources */,
 				17C8B366583018A2DA311704 /* TestViewController.swift in Sources */,

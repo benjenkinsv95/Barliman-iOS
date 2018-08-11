@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1f6d57e-45c6-4e5a-940c-de9c865f86f5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Barliman iOS Prototype/View/TestTableViewCell.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Barliman iOS Prototype/Controller/SynthesizedCodeTextViews.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Barliman iOS Prototype/Controller/SynthesizedCodeTextViews.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barliman iOS Prototype.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Barliman iOS Prototype.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Barliman iOS Prototype/View/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Barliman iOS Prototype/View/Base.lproj/Main.storyboard" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/Barliman_iOS_Prototype-hbsrgxzadqurjrbfyeamvhfpmphw/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
