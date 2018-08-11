@@ -56,10 +56,19 @@ class DefaultCodeSynthesizer: CodeSynthesizer {
                     abort()
                 }
 
-                guard let newSynthesizedCode = projectJson["payload"].string
+                guard var newSynthesizedCode = projectJson["payload"].string
                 else {
                     assertionFailure("Couldn't extract fields from JSON. Maybe the API changed?")
                     abort()
+                }
+
+                // Trim whitespace that server may respond with.
+                newSynthesizedCode = newSynthesizedCode.trimmingCharacters(in: .whitespacesAndNewlines)
+
+                // The API currently tells you about side conditions at the end of the response
+                // Comment them out so the highlighting works.
+                if let range = newSynthesizedCode.range(of: "\nSide conditions:") {
+                    newSynthesizedCode = newSynthesizedCode.replacingOccurrences(of: "\n", with: "\n;", options: .literal, range: range.lowerBound ..< newSynthesizedCode.endIndex)
                 }
 
                 self.synthesizedCode = newSynthesizedCode

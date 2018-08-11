@@ -16,6 +16,7 @@ class SynthesizedCodeTextViews {
             assertionFailure("Expected the synthesized code.")
             abort()
         }
+
         synthesizedCode.text = code
     }
 }
