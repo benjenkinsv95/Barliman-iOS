@@ -30,7 +30,7 @@ public extension UserDefaults {
         }
 
         if Defaults[.selectedTheme] == "" {
-            Defaults[.selectedTheme] = "dark"
+            Defaults[.selectedTheme] = "atom-one-dark"
         }
     }
 }

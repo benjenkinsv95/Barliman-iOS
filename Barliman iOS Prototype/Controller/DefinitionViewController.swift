@@ -36,7 +36,10 @@ class DefinitionViewController: UIViewController, UITextViewDelegate {
         definitionView?.textView?.delegate = self
         HighlightrThemeManager.instance.register(schemeTextView: definitionView)
         HighlightrThemeManager.instance.register(schemeTextView: synthesizedCode)
-        codeSynthesizer.synthesize()
+
+        DispatchQueue.global(qos: .background).async {
+            self.codeSynthesizer.synthesize()
+        }
     }
 
     override func viewWillAppear(_: Bool) {
