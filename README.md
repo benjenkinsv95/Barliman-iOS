@@ -5,7 +5,7 @@ A port of @webyrd's Barliman code synthesis IDE for iOS. Initially created for m
 ### Barliman
 My project depends on a backend API that is a modified version of [Barliman](https://github.com/webyrd/Barliman) (MIT Licensed).
 
-My [Barliman Backend API can be found here](https://github.com/benjenkinsv95/barliman-api), that said, I would treat it as a library, and not part of this assignment directly. Hence the separate the repository.
+My [Barliman Backend API can be found here](https://github.com/benjenkinsv95/barliman-api), that said, I would treat it as a library, and not part of this assignment directly. Hence the separate repository.
 
 ### Pods
 #### [Highlightr](http://cocoadocs.org/docsets/Highlightr/1.1.0/)
