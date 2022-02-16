@@ -1,6 +1,8 @@
 # Barliman-iOS
 A port of @webyrd's Barliman code synthesis IDE for iOS. Initially created for my CSCI S-65 Advanced Mobile Application Development Using Swift and iOS class at Harvard Summer School.
 
+[![Barliman iOS YouTube](https://img.youtube.com/vi/Kc0d9nZjp3I/0.jpg)](https://www.youtube.com/watch?v=Kc0d9nZjp3I)
+
 ## Citations
 ### Barliman
 My project depends on a backend API that is a modified version of [Barliman](https://github.com/webyrd/Barliman) (MIT Licensed).
